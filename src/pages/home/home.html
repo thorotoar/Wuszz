@@ -1,18 +1,56 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu" ></ion-icon>
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid>
+    <ion-row>
+      <ion-slides pager>
+        <ion-slide *ngFor="let slide of slides">
+          <img [src]="slide.image" class="slide-image"/>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <a (click)="orderKiloan()" >
+        <ion-card>
+          <img src="../../assets/imgs/icon/kiloan.png"/>
+          <ion-card-content>
+            <p class="center-wrapper">Cuci Kiloan</p>
+          </ion-card-content>
+        </ion-card>
+        </a>
+      </ion-col>
+      <ion-col>
+        <a (click)="orderSatuan()" >
+        <ion-card>
+          <img src="../../assets/imgs/icon/satuan.png"/>
+          <ion-card-content>
+            <p class="center-wrapper">Cuci Satuan</p>
+          </ion-card-content>
+        </ion-card>
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button block (click)="showLongToast()" full>Ketentuann Laundry!</button>
+    </ion-row>
+  </ion-grid>
+  <ion-fab bottom right edge>
+    <button (click)="quitApp()" ion-fab mini><ion-icon name="power"></ion-icon></button>
+  </ion-fab>
 </ion-content>
+
+<ion-footer>
+  <ion-navbar hideBackButton>
+    <ion-title align="center">
+      <h6>Copyright &copy; 2017 | Zebra</h6>
+    </ion-title>
+  </ion-navbar>
+</ion-footer>

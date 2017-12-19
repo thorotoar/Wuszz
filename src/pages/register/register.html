@@ -1,0 +1,57 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h5 class="center-wrapper" style="color: #26afe5">Daftar Akun</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Nama</ion-label>
+            <ion-input type="text" [(ngModel)]="registerData.profileName"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Alamat</ion-label>
+            <ion-textarea [(ngModel)]="registerData.profileAdress" ></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" [(ngModel)]="registerData.profileEmail" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>No. Telp</ion-label>
+            <ion-input type="number" [(ngModel)]="registerData.profileNumber" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="registerData.profilePassword" ></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button full (click)="registerApp(registerData)" >Daftar</button>
+    </ion-row>
+    <ion-row>
+      <button ion-button full (click)="loginApp()" >Kembali</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-navbar hideBackButton>
+    <ion-title align="center">
+      <h6>Copyright &copy; 2017 | Zebra</h6>
+    </ion-title>
+  </ion-navbar>
+</ion-footer>

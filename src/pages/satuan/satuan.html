@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ORDER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h5 class="center-wrapper" style="color: #26afe5">Order Loundrian</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-datetime placeholder="Diambil" displayFormat="MMM DD YYYY" [(ngModel)]="reqSatuan.itemTake"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-textarea placeholder="Alamat" [(ngModel)]="reqSatuan.itemAddress" ></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="number" placeholder="No. Telp" [(ngModel)]="reqSatuan.itemNumber" ></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-label>Jenis Barang :</ion-label>
+          <ion-item>
+            <ion-label>Celana</ion-label>
+            <ion-input type="number" [(ngModel)]="reqSatuan.itemCelana" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Baju</ion-label>
+            <ion-input type="number" [(ngModel)]="reqSatuan.itemBaju" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Mukena</ion-label>
+            <ion-input type="number" [(ngModel)]="reqSatuan.itemMukena" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Jaket</ion-label>
+            <ion-input type="number" [(ngModel)]="reqSatuan.itemJaket" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sprei</ion-label>
+            <ion-input type="number" [(ngModel)]="reqSatuan.itemSprei" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Lainnya</ion-label>
+            <ion-input type="number" [(ngModel)]="reqSatuan.itemLainya" ></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button full (click)="confirmSatuan(reqSatuan)" >Order</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-navbar hideBackButton>
+    <ion-title align="center">
+      <h6>Copyright &copy; 2017 | Zebra</h6>
+    </ion-title>
+  </ion-navbar>
+</ion-footer>

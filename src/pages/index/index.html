@@ -1,0 +1,40 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center-wrapper" >
+        <img style="width: 55%" align="center" src="../../assets/imgs/wuszz.png"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input type="text" placeholder="e-mail"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button full (click)="startApp()" >Login</button>
+    </ion-row>
+    <ion-row class="center-wrapper">
+      <ion-col>
+        <p>tidak punya akun? <a (click)="navigateRegisterPage()">Daftar</a></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-navbar hideBackButton>
+    <ion-title align="center">
+      <h6>Copyright &copy; 2017 | Zebra</h6>
+    </ion-title>
+  </ion-navbar>
+</ion-footer>

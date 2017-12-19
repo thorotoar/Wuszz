@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Order Satuan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <h5 class="center-wrapper" style="color: #26afe5">Order Satuan</h5>
+    </ion-row>
+    <ion-row>
+      <ion-list>
+        <ion-item ngFor="let item of satuanRef$ | async" >
+          <ion-grid>
+            <ion-row><p>Daftar Pakaian dan Jumlah :</p></ion-row>
+            <ion-row>
+              <ion-col>
+                Celana :<span>{{item.itemCelana}}</span>
+              </ion-col>
+              <ion-col>
+                Jaket :<span>{{item.itemJaket}}</span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Baju :<span>{{item.itemBaju}}</span>
+              </ion-col>
+              <ion-col>
+                Sprei :<span>{{item.itemSprei}}</span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Mukena :<span>{{item.itemMukena}}</span>
+              </ion-col>
+              <ion-col>
+                Lainnya :<span>{{item.itemLainya}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row>
+      <ion-card>
+        <ion-card-content>
+          <h4>Tungggu Petugas kami akan melakukan perjalanan alamat anda dan akan mengambil loundrian yang anda punya</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <button ion-button (click)="terimaSatuan()" full>Accept</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-navbar hideBackButton>
+    <ion-title align="center">
+      <h6>Copyright &copy; 2017 | Zebra</h6>
+    </ion-title>
+  </ion-navbar>
+</ion-footer>
